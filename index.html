@@ -5,30 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luméor - Moda Exclusiva</title>
     
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS - Framework para diseño responsive -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Tipografías elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
+    <!-- Font Awesome - Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/styles-simple.css">
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- ========================================
+         NAVEGACIÓN
+         Menú fijo en la parte superior
+    ========================================= -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
+            <!-- Logo/Marca -->
             <a class="navbar-brand" href="#home">
                 <span class="brand-name">Luméor</span>
             </a>
+            
+            <!-- Botón hamburguesa para móvil -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
+            <!-- Menú de navegación -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -38,15 +45,7 @@
                         <a class="nav-link" href="#coleccion">Colección</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#acerca">Acerca de</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cuentaModal">
-                            <i class="fas fa-user"></i> Cuenta
-                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#carritoModal">
@@ -59,227 +58,66 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Carousel -->
+    <!-- ========================================
+         HERO SECTION
+         Imagen principal con texto
+    ========================================= -->
     <section id="home" class="hero-section">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&q=80');">
-                        <div class="hero-overlay"></div>
-                    </div>
-                    <div class="carousel-caption">
-                        <h1 class="hero-title">Elegancia Atemporal</h1>
-                        <p class="hero-subtitle">Descubre la nueva colección Primavera 2025</p>
-                        <a href="#coleccion" class="btn btn-custom">Explorar Colección</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=80');">
-                        <div class="hero-overlay"></div>
-                    </div>
-                    <div class="carousel-caption">
-                        <h1 class="hero-title">Estilo Único</h1>
-                        <p class="hero-subtitle">Piezas exclusivas para ti</p>
-                        <a href="#coleccion" class="btn btn-custom">Ver Más</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1600&q=80');">
-                        <div class="hero-overlay"></div>
-                    </div>
-                    <div class="carousel-caption">
-                        <h1 class="hero-title">Lujo Refinado</h1>
-                        <p class="hero-subtitle">Calidad excepcional en cada detalle</p>
-                        <a href="#coleccion" class="btn btn-custom">Comprar Ahora</a>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
-    </section>
-
-    <!-- Featured Categories -->
-    <section class="categories-section py-5">
-        <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-12">
-                    <h2 class="section-title">Nuestras Categorías</h2>
-                    <div class="title-underline"></div>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="category-card">
-                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Mujer">
-                        <div class="category-overlay">
-                            <h3>Mujer</h3>
-                            <a href="#coleccion" class="btn btn-outline-light">Ver Colección</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="category-card">
-                        <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?w=600&q=80" alt="Hombre">
-                        <div class="category-overlay">
-                            <h3>Hombre</h3>
-                            <a href="#coleccion" class="btn btn-outline-light">Ver Colección</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="category-card">
-                        <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=600&q=80" alt="Accesorios">
-                        <div class="category-overlay">
-                            <h3>Accesorios</h3>
-                            <a href="#coleccion" class="btn btn-outline-light">Ver Colección</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&q=80');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Elegancia Atemporal</h1>
+                <p class="hero-subtitle">Descubre nuestra colección exclusiva</p>
+                <a href="#coleccion" class="btn btn-custom">Ver Colección</a>
             </div>
         </div>
     </section>
 
-    <!-- Products Collection -->
+    <!-- ========================================
+         SECCIÓN DE PRODUCTOS
+         Catálogo con 6 productos
+    ========================================= -->
     <section id="coleccion" class="products-section py-5">
         <div class="container">
+            <!-- Título de la sección -->
             <div class="row text-center mb-5">
                 <div class="col-12">
-                    <h2 class="section-title">Colección Destacada</h2>
+                    <h2 class="section-title">Nuestra Colección</h2>
                     <div class="title-underline"></div>
-                    <p class="section-subtitle">Piezas seleccionadas con el más alto estándar de calidad</p>
                 </div>
             </div>
             
-            <!-- Filter Buttons -->
-            <div class="row mb-4">
-                <div class="col-12 text-center">
-                    <div class="filter-buttons">
-                        <button class="btn btn-filter active" data-filter="all">Todos</button>
-                        <button class="btn btn-filter" data-filter="mujer">Mujer</button>
-                        <button class="btn btn-filter" data-filter="hombre">Hombre</button>
-                        <button class="btn btn-filter" data-filter="accesorios">Accesorios</button>
-                    </div>
-                </div>
-            </div>
-
+            <!-- Contenedor de productos (se llena con JavaScript) -->
             <div class="row g-4" id="products-container">
-                <!-- Products will be loaded by JavaScript -->
+                <!-- Los productos se cargan dinámicamente -->
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="acerca" class="about-section py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&q=80" alt="Sobre Luméor" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="section-title">Sobre Luméor</h2>
-                    <div class="title-underline mb-4"></div>
-                    <p class="about-text">
-                        Luméor nace de la pasión por la moda exclusiva y atemporal. Cada pieza de nuestra colección 
-                        es cuidadosamente seleccionada para reflejar elegancia, sofisticación y calidad excepcional.
-                    </p>
-                    <p class="about-text">
-                        Creemos que la moda es una forma de expresión personal, y por eso ofrecemos piezas únicas 
-                        que te permiten destacar con estilo propio. Nuestra misión es brindarte una experiencia de 
-                        compra excepcional con productos que perduran en el tiempo.
-                    </p>
-                    <div class="about-features mt-4">
-                        <div class="feature-item">
-                            <i class="fas fa-gem"></i>
-                            <div>
-                                <h5>Calidad Premium</h5>
-                                <p>Materiales de la más alta calidad</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-star"></i>
-                            <div>
-                                <h5>Diseños Exclusivos</h5>
-                                <p>Piezas únicas y limitadas</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-shipping-fast"></i>
-                            <div>
-                                <h5>Envío Gratis</h5>
-                                <p>En compras mayores a $100</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
+    <!-- ========================================
+         SECCIÓN DE CONTACTO
+         Formulario simple
+    ========================================= -->
     <section id="contacto" class="contact-section py-5">
         <div class="container">
-            <div class="row text-center mb-5">
+            <div class="row text-center mb-4">
                 <div class="col-12">
                     <h2 class="section-title">Contáctanos</h2>
                     <div class="title-underline"></div>
-                    <p class="section-subtitle">Estamos aquí para ayudarte</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h5>Dirección</h5>
-                                <p>Av. Principal 123, Ciudad de México</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h5>Teléfono</h5>
-                                <p>+52 55 1234 5678</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h5>Email</h5>
-                                <p>contacto@lumeor.com</p>
-                            </div>
-                        </div>
-                        <div class="social-links mt-4">
-                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <form id="contact-form" class="contact-form">
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Nombre completo" required>
+                            <input type="text" class="form-control" placeholder="Nombre" required>
                         </div>
                         <div class="mb-3">
                             <input type="email" class="form-control" placeholder="Email" required>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Asunto">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                            <textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-custom w-100">Enviar Mensaje</button>
                     </form>
@@ -288,131 +126,35 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer py-5">
+    <!-- ========================================
+         FOOTER
+         Pie de página con información
+    ========================================= -->
+    <footer class="footer py-4">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h4 class="brand-name mb-3">Luméor</h4>
-                    <p>Moda exclusiva y atemporal para quienes aprecian la elegancia y la calidad.</p>
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h4 class="brand-name mb-2">Luméor</h4>
+                    <p>Moda exclusiva y atemporal</p>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                    <h5>Comprar</h5>
-                    <ul class="footer-links">
-                        <li><a href="#coleccion">Mujer</a></li>
-                        <li><a href="#coleccion">Hombre</a></li>
-                        <li><a href="#coleccion">Accesorios</a></li>
-                        <li><a href="#coleccion">Nuevos</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                    <h5>Ayuda</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Envíos</a></li>
-                        <li><a href="#">Devoluciones</a></li>
-                        <li><a href="#">Tallas</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                    <h5>Empresa</h5>
-                    <ul class="footer-links">
-                        <li><a href="#acerca">Sobre Nosotros</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                        <li><a href="#">Privacidad</a></li>
-                        <li><a href="#">Términos</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5>Newsletter</h5>
-                    <p class="small">Suscríbete para recibir ofertas exclusivas</p>
-                    <form class="newsletter-form">
-                        <input type="email" class="form-control mb-2" placeholder="Tu email">
-                        <button type="submit" class="btn btn-custom w-100">Suscribirse</button>
-                    </form>
-                </div>
-            </div>
-            <hr class="my-4">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2025 Luméor. Todos los derechos reservados.</p>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <p class="mt-3 mb-0">&copy; 2025 Luméor. Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Modal Cuenta -->
-    <div class="modal fade" id="cuentaModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Mi Cuenta</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <ul class="nav nav-tabs mb-3" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#login-tab">Iniciar Sesión</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#register-tab">Registrarse</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="login-tab">
-                            <form id="login-form">
-                                <div class="mb-3">
-                                    <label class="form-label">Email</label>
-                                    <input type="email" class="form-control" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" required>
-                                </div>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="remember">
-                                    <label class="form-check-label" for="remember">Recordarme</label>
-                                </div>
-                                <button type="submit" class="btn btn-custom w-100">Iniciar Sesión</button>
-                                <div class="text-center mt-3">
-                                    <a href="#" class="small">¿Olvidaste tu contraseña?</a>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade" id="register-tab">
-                            <form id="register-form">
-                                <div class="mb-3">
-                                    <label class="form-label">Nombre completo</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Email</label>
-                                    <input type="email" class="form-control" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Confirmar contraseña</label>
-                                    <input type="password" class="form-control" required>
-                                </div>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="terms" required>
-                                    <label class="form-check-label" for="terms">Acepto los términos y condiciones</label>
-                                </div>
-                                <button type="submit" class="btn btn-custom w-100">Registrarse</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Carrito -->
+    <!-- ========================================
+         MODAL DEL CARRITO
+         Ventana emergente para ver el carrito
+    ========================================= -->
     <div class="modal fade" id="carritoModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Carrito de Compras</h5>
@@ -420,10 +162,10 @@
                 </div>
                 <div class="modal-body">
                     <div id="cart-items">
-                        <div class="text-center py-5">
+                        <!-- El contenido del carrito se carga con JavaScript -->
+                        <div class="text-center py-4">
                             <i class="fas fa-shopping-bag fa-3x mb-3" style="color: #d4c5b9;"></i>
                             <p>Tu carrito está vacío</p>
-                            <a href="#coleccion" class="btn btn-custom" data-bs-dismiss="modal">Ir a Comprar</a>
                         </div>
                     </div>
                 </div>
@@ -433,17 +175,17 @@
                             <strong>Total:</strong>
                             <strong id="cart-total">$0.00</strong>
                         </div>
-                        <button class="btn btn-custom w-100" id="checkout-btn">Proceder al Pago</button>
+                        <button class="btn btn-custom w-100" id="checkout-btn">Finalizar Compra</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS - Necesario para componentes interactivos -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <!-- JavaScript Personalizado -->
+    <script src="js/main-simple.js"></script>
 </body>
 </html>
